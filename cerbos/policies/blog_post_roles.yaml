@@ -1,0 +1,11 @@
+apiVersion: api.cerbos.dev/v1
+derivedRoles:
+
+  name: BlogPostRoles
+  definitions:
+  
+    - name: owner
+      parentRoles: ["user"]
+      condition:
+        match:
+          expr: request.resource.attr.owner == request.principal.id
