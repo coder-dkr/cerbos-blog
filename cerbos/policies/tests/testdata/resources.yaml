@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://api.cerbos.dev/latest/cerbos/policy/v1/TestFixture/Resources.schema.json
+# docs: https://docs.cerbos.dev/cerbos/latest/policies/compile#_sharing_test_fixtures
+
+resources:
+  blog2#1:
+    id: blog2#1
+    kind: blog2
+    attr: {}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { users } from "@/data/data";
+import { users } from "@/constant/data";
 
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
@@ -200,7 +200,7 @@ const Home = () => {
                 htmlFor="owner"
                 className="block text-sm font-medium text-gray-200"
               >
-                Owner
+                Who is Editing?
               </label>
               <select
                 id="owner"

@@ -1,0 +1,65 @@
+# yaml-language-server: $schema=https://api.cerbos.dev/latest/cerbos/policy/v1/TestSuite.schema.json
+# docs: https://docs.cerbos.dev/cerbos/latest/policies/compile#testing
+
+name: blog2TestSuite
+description: Tests for verifying the blog2 resource policy
+tests:
+  - name: blog2 actions
+    input:
+      principals:
+        - user1_admin#1
+        - user2#2
+        - user3#3
+        - user4#4
+        - user5_admin#5
+        - user6#6
+      resources:
+        - blog2#1
+      actions:
+        - create
+        - read
+        - update
+        - delete
+    expected:
+      - resource: blog2#1
+        principal: user1_admin#1
+        actions:
+          create: EFFECT_ALLOW
+          read: EFFECT_ALLOW
+          update: EFFECT_ALLOW
+          delete: EFFECT_ALLOW
+      - resource: blog2#1
+        principal: user2#2
+        actions:
+          create: EFFECT_ALLOW
+          read: EFFECT_ALLOW
+          update: EFFECT_ALLOW
+          delete: EFFECT_ALLOW
+      - resource: blog2#1
+        principal: user3#3
+        actions:
+          create: EFFECT_DENY
+          read: EFFECT_ALLOW
+          update: EFFECT_DENY
+          delete: EFFECT_DENY
+      - resource: blog2#1
+        principal: user4#4
+        actions:
+          create: EFFECT_DENY
+          read: EFFECT_ALLOW
+          update: EFFECT_DENY
+          delete: EFFECT_DENY
+      - resource: blog2#1
+        principal: user5_admin#5
+        actions:
+          create: EFFECT_ALLOW
+          read: EFFECT_ALLOW
+          update: EFFECT_ALLOW
+          delete: EFFECT_ALLOW
+      - resource: blog2#1
+        principal: user6#6
+        actions:
+          create: EFFECT_DENY
+          read: EFFECT_ALLOW
+          update: EFFECT_DENY
+          delete: EFFECT_DENY

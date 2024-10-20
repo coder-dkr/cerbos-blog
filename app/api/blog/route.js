@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { cerbos } from "../../../lib/cerbos-client";
-import { users } from "@/data/data";
+import { users } from "@/constant/data";
 import { getBlog, updateBlog, deleteBlog } from "../../../utils/service";
 
 export async function GET(req){

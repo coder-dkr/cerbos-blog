@@ -1,4 +1,4 @@
-import {blogs} from "@/data/data";
+import {blogs} from "@/constant/data";
 
 export async function getAllBlogs() {
   return blogs;

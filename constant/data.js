@@ -1,9 +1,10 @@
 let users = {
-  1: {name: 'user1', role: 'user'},
-  2: {name: 'user2', role: 'admin'},
+  1: {name: 'user1', role: 'admin'},
+  2: {name: 'user2', role: 'user'},
   3: {name: 'user3', role: 'user'},
-  4: {name: 'user4', role: 'admin'},
-  5: {name: 'user5', role: 'user'},
+  4: {name: 'user4', role: 'user'},
+  5: {name: 'user5', role: 'admin'},
+  6: {name: 'user6', role: 'user'},
 }
 
 let blogs = {
@@ -36,6 +37,12 @@ let blogs = {
     title: 'Fifth Blog',
     content: 'The rise of quantum computing: A new era in technology.',
     owner: 'user5'
+  },
+  '6': {
+    id: '6',
+    title: 'Sixth Blog',
+    content: 'The Clash of GPT AND CO-PILOT, stay tuned',
+    owner: 'user6'
   }
 };
 
